@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        {% if age > 20 %}
+            <h1>YOUNG AGE</h1>
+        {% endif %}
+
+        {% if age > 20 %}
+            <h1>YOUNG AGE</h1>
+        {% else %}
+            <h1>PILLA BACCHA</h1>
+        {% endif %}
+
+        {% if age > 18 %}
+            <h1>{{name}} ELIGIBLE TO VOTE </h1>
+        {% elif age < 18 %}
+            <h1>{{name}} POYI CHADUVUKO</h1>
+        {% else %}
+            <h1>{{name}} INKA TIME UNDI LE OYY</h1>
+        {% endif %}
+
+        {% if runs > 60 %}
+            {% if runs > 100 %}
+                <h1>MORE THAN CENTURY</h1>
+            {% elif runs == 100 %}
+                <h1>CENTURY</h1>
+            {% endif %}
+        {% else %}
+            {% if runs > 50 %}
+                <h1>MORE THAN HALF CENTURY</h1>
+            {% elif runs == 50 %}
+                <h1>EXACT HALF CENTURY</h1>
+            {% else %}
+                <h1>LESS THAN HALF CENTURY</h1>
+            {% endif %}
+        {% endif %}
+
+        {% for i in name %}
+            <h1>{{i}}</h1>
+        {% endfor %}
+    </center>
+</body>
+</html>
